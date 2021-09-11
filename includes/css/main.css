@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 de set de 2021, 00:14:30
+    Author     : Axel
+*/
+
+
+p{
+    font-family: monospace;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.logo{
+    height: 250px;
+    width: 250px;
+    background: url(../../includes/img/user.png)no-repeat, #f3f3f3a8;
+    background-size: 100%;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+input{
+    height: 25px;
+    width: 250px;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid grey;
+    margin-top: -30px;
+}
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.logar{
+    height: 60px;
+    width: 120px;
+    background: #7573ff;
+    border-radius: 16px;
+    margin-left: 65px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: 0.6s;
+}
+.logar:hover{
+    background: blue;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.logar p{
+    margin-top: 10px;
+    position: absolute;
+}
+
+.footer{
+    height: 25px;
+    width: 450px;
+    background: grey;
+    position: absolute;
+    margin-left: -97px;
+    margin-top: 76px;
+    border-radius: 0 0 6px 6px;
+    text-align: right;
+}
+.footer a{
+    margin-right: 7px;
+    margin-top: 2px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.footer a:hover{
+    color: gold;
+    text-decoration: underline;
+    transition: 0.5s; 
+}
+
+
+@keyframes wrong {
+    0% {
+
+        transform: translateX(20px);
+        background: red;
+    }
+    10% {
+        transform: translateX(-20px);
+
+    }
+    20% {
+
+        transform: translateX(20px);
+    }
+    30% {
+        transform: translateX(-20px);
+
+    }
+    40% {
+
+        transform: translateX(20px);
+    }
+    50% {
+        transform: translateX(-20px);
+
+    }
+    60% {
+
+        transform: translateX(20px);
+    }
+    70% {
+        transform: translateX(-20px);
+
+    }
+    80% {
+
+        transform: translateX(20px);
+    }
+    90% {
+        transform: translateX(-20px);
+
+    }
+    100% {
+
+        transform: translateX(0px);
+    }
+
+}
+
+.wrong1{
+    position: absolute;
+    margin-left: -55px;
+    margin-top: 10px;
+    display: none;
+}
+
+.wrong2{
+    position: absolute;
+    margin-left: -55px;
+    margin-top: 25px;
+    display: none;
+}
+
+.bemvindo{
+    background: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    margin-top: -8px;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.bemvindo h1{
+    color: white;
+}
+
