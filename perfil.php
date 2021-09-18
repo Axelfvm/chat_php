@@ -46,7 +46,8 @@ if ($perfilInfo['email'] == '') {
 
     </style>
     <body>
-        <div class="center">
+        <?php include './includes/pages/header.php'; ?>
+        <div class="center" style="margin-top: 70px;">
             <form>
                 <h2><?= $user ?></h2>
                 <br>

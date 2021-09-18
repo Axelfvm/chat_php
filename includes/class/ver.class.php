@@ -15,9 +15,12 @@ if (isset($_POST['enviar'])) {
 
     $msg = $_POST['menssagem'];
     $autor = $_SESSION['usuario'];
+    $userip = $_POST['userIP'];
     if ($msg != '') {
         $sql = $pdo->prepare("INSERT INTO $tb_post (msg,autor,date) VALUES ('$msg', '$autor', NOW())");
         $sql->execute([$msg, $autor]);
+        $sql1 = $pdo->prepare("UPDATE $tb_user SET lastIP='$userip' WHERE usuario = '$autor'");
+        $sql1->execute();
     }
 }
 

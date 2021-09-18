@@ -1,6 +1,5 @@
 <?php
 include('./config/config.php');
-include('./includes/class/in.class.php');
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +27,14 @@ include('./includes/class/in.class.php');
 
                 <input class="logar" name="acao" value="Logar" type="submit">
                 
+                <?php include('./includes/class/in.class.php'); ?>
                 
                 <a class="wrong1" id="usrwrong">Usuário Invalido</a>
                 <a class="wrong2" id="passwrong">Senha Incorreta</a>
 
                 <div class="footer">
                     <a href="/">← Voltar</a>
+                    <a href="cadastrar.php">Cadastro</a>
                 </div>
             </form>
 

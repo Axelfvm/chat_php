@@ -28,7 +28,9 @@ include('./includes/class/cargo.class.php');
                     <option value="10">Administrador</option>
                     <option value="0">Usuário</option>
                 </select>
-                <input type="submit" value="Mudar" name="mudar"/>
+                <br>
+                <br>
+                <input type="submit" value="Mudar" name="mudar" style="font-size: 16px;"/>
 
                 <p>Cargo: <?= $perfilInfo['su'] ?></p>
                 <br>
