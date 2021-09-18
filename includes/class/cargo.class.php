@@ -32,7 +32,6 @@ if ($perfilInfo['su'] == 10) {
 
 if (isset($_POST['mudar'])) {
     $su = $_POST['cargo'];
-    //$sql = $pdo->prepare("INSERT INTO $tb_user (su) VALUES ('$su') WHERE = '$user'");
     $queryCargo = $pdo->prepare("UPDATE $tb_user SET su='$su' WHERE usuario = '$user'");
     $queryCargo->execute([$su]);
     //echo 'Usuário cadastrado com sucesso';
