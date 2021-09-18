@@ -15,6 +15,26 @@ if ($retorno1['su'] != 10) {
     die();
 }
 
+if (isset($_GET['excluir'])) {
+
+    $excluir = $pdo->prepare("DELETE FROM $tb_user WHERE id = ?");
+    $id = (int) $_GET['excluir'];
+    $excluir->execute([$id]);
+    header('Location: buscar.php');
+    die();
+}
+
+if (isset($_GET['editar'])) {
+
+    $excluir = $pdo->prepare("DELETE FROM $tb_user WHERE id = ?");
+    $id = (int) $_GET['editar'];
+    $excluir->execute([$id]);
+    header('Location: buscar.php');
+    die();
+}
+
+
+
 if (isset($_POST['acao'])) {
     $busca = $_POST['busca'];
 
@@ -25,8 +45,15 @@ if (isset($_POST['acao'])) {
 
     if (count($retorno) > 0) {
         foreach ($retorno as $value) {
+            if ($value['su'] == 10){
+                $value['su'] = 'Administrador';
+            } else if($value['su'] == 0){
+                $value['su'] = 'Usuário';
+            }
+            
             echo '<tr>';
-            echo '' . '<td>' . $value['id'] . '</td>' . '<td>' . $value['nome'] . '</td>' . '<td>' . $value['usuario'] . '</td>' . '<td>' . $value['email'] . '</td>' . '<td><input type="button" value="Mudar senha"> <input type="button" value="Editar cargo"> <input type="button" value="Excluir"> </td>' . '</tr>';
+            echo '' . '<td>' . $value['id'] . '</td>' . '<td>' . $value['nome'] . '</td>' . '<td>' . '<a href="perfil.php?user='. $value['usuario'] . '" target="_blank">'. $value['usuario'] .'</a></td>' . '<td>' . $value['email'] . '</td>' . '<td>' . $value['su'] . '</td>'.'<td><input type="button" value="Mudar senha"> <a href="editar.php?user='. $value['usuario'] . '"><input type="button" value="Editar perfil"/></a> <a href="cargo.php?user='. $value['usuario']. '"><input type="button" value="Editar cargo"></a> <a href="?excluir='. $value['id'] . '"><input type="button" value="Excluir"/></a></td>' . '</tr>' . '';
+
             echo '</tr>';
         }
     }

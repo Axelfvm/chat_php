@@ -15,6 +15,7 @@ and open the template in the editor.
     display: grid; 
     text-align: center;
     justify-content: center;
+    margin-top: 80px;
 }
 form{
     text-align: center;
@@ -26,11 +27,16 @@ form input{
     width: 150px;
     border-radius: 16px;
     margin-bottom: -40px;
+    margin-top: 5px;
 }
 form select{
     height: 25px;
-    margin-top: -50px;
+    margin-top: 1px;
 }
 .space{
     height: 1px;
+}
+label{
+    margin-top: 15px;
+    margin-bottom: -20px;
 }

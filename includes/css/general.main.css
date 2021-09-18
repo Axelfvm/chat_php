@@ -27,3 +27,75 @@ body{
 form{
     text-align: center;
 }
+
+.header{
+    background: #8ce3ff;
+    height: 62px;
+    width: 100vw;
+    margin-top: -8px;
+    margin-left: -8px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.header ul{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.header li{
+    margin-right: 30px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.box{
+    height: 200px;
+    width: 135px;
+    background: #dddddd;
+    border-radius: 16px;
+    margin-right: 35px;
+}
+
+.linha{
+    height: 16px;
+    width: 100%;
+    word-wrap: break-word;
+
+}
+.linha p{
+    font-family: monospace;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+#iframe{
+    height: 800px;
+    width: 100%;
+    border: none;
+    display: flex;
+}
+.home-form{
+    background: #d0d0d0a8;
+    height: 45px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    border-radius: 6px 6px 0 0;
+}
+.erro-perfil{
+    height: 50px;
+    width: 50px;
+    background: black;
+    z-index: 1;
+    position: absolute;
+}
+
+.erro-login{
+    height: 250px;
+    width: 420px;
+    background: white;
+    border-radius: 16px;
+    z-index: 1;
+}

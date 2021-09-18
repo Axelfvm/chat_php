@@ -23,6 +23,10 @@ if (isset($_POST['acao'])) {
     $criptografada = password_hash($senha, PASSWORD_DEFAULT);
     $su = $_POST['cargo'];
     $email = $_POST['email'];
+    $sexo = $_POST['sexo'];
+    $pais = $_POST['pais'];
+    $idade = $_POST['idade'];
+    
 
 
     $query = $pdo->prepare("select * from $tb_user where usuario = '$usuario'");
@@ -33,12 +37,12 @@ if (isset($_POST['acao'])) {
     if (count($retorno) > 0) {
         //usuário está registrado
         echo 'Usuário existente!';
-    } else if ($nome == '' || $usuario == '' || $senha == '') {
+    } else if ($nome == '' || $usuario == '' || $senha == '' || $email == '') {
         echo 'Preencha o campo.';
     } else {
 
-        $sql = $pdo->prepare("INSERT INTO $tb_user (nome,usuario,senha,su,email) VALUES ('$nome','$usuario','$criptografada', '$su','$email')");
-        $sql->execute([$nome, $usuario, $criptografada, $su, $email]);
+        $sql = $pdo->prepare("INSERT INTO $tb_user (nome,usuario,senha,su,email,sexo,idade,pais) VALUES ('$nome','$usuario','$criptografada', '$su','$email', '$sexo', '$idade', '$pais')");
+        $sql->execute([$nome, $usuario, $criptografada, $su, $email, $sexo, $idade, $pais]);
         echo 'Usuário cadastrado com sucesso';
     }
 }

@@ -7,21 +7,37 @@ if (isset($_GET['sair'])) {
     header('Location: index.php');
     die();
 }
+
+if (isset($_GET['user'])) {
+    $user = $_GET['user'];
+    $query = $pdo->prepare("select * from $tb_user where usuario = '$user'");
+    $query->execute();
+    $retorno = $query1->fetch();
+
+    if ($query->rowCount() == 1) {
+        $perfilInfo = $query->fetch();
+    } else {
+//Erro
+        header('Location: home.php');
+    }
+}
+if ($perfilInfo['email'] == '') {
+    $perfilInfo['email'] = 'Nao definido';
+}if ($perfilInfo['idade'] == '') {
+    $perfilInfo['idade'] = 'Nao definido';
+} if ($perfilInfo['sexo'] == '') {
+    $perfilInfo['sexo'] = 'Nao definido';
+} if ($perfilInfo['pais'] == '') {
+    $perfilInfo['pais'] = 'Nao definido';
+}
 ?>
 
-<!-- Teste -->
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title><?= $title ?> - Painel</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<script src="includes/js/main.js" type="text/javascript"></script>-->
         <link href="includes/css/main.css" rel="stylesheet" type="text/css"/>
         <link href="includes/css/general.main.css" rel="stylesheet" type="text/css"/>
 
@@ -32,11 +48,14 @@ and open the template in the editor.
     <body>
         <div class="center">
             <form>
-                <h2>Bem vindo <?= $_SESSION['nome'] ?></h2>
+                <h2><?= $user ?></h2>
                 <br>
-                <h2><a href="cadastro.php" target="_blank">Cadastrar Usuário</a></h2>
-                <h2><a href="buscar.php" target="_blank">Buscar Usuário</a></h2>
-                <h2><a href="?sair">Sair</a></h2>
+                <p>Nome: <?= $perfilInfo['nome'] ?></p>
+                <p>Email: <?= $perfilInfo['email'] ?></p>
+                <p>Idade: <?= $perfilInfo['idade'] ?></p>
+                <p>Sexo: <?= $perfilInfo['sexo'] ?></p>
+                <p>País: <?= $perfilInfo['pais'] ?></p>
+                <a href='home.php'>Voltar</a>
             </form>
         </div>
     </body>

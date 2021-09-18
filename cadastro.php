@@ -14,7 +14,6 @@ and open the template in the editor.
         <title><?= $title ?> - Cadastro</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<script src="includes/js/main.js" type="text/javascript"></script>-->
         <link href="includes/css/general.main.css" rel="stylesheet" type="text/css"/>
         <link href="includes/css/cadastro.main.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -27,9 +26,17 @@ and open the template in the editor.
                 <input type="text" name="usuario" placeholder="Usuário" class="inpt_cadastro">
                 <input type="password" name="senha" placeholder="Senha" class="inpt_cadastro">
                 <input type="text" name="email" placeholder="Email" class="inpt_cadastro">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+
+                </select>
+                <input type="text" name="idade" placeholder="Idade" class="inpt_cadastro">
+                <input type="text" name="pais" placeholder="País" class="inpt_cadastro">
+
 
                 <label for="cargo">Cargo:</label>
-
                 <select id="cargo" name="cargo">
                     <option value="0">Usuário</option>
                     <option value="10">Admin</option>
@@ -40,7 +47,7 @@ and open the template in the editor.
                 <?php include('./includes/class/cadastro.class.php'); ?>
                 <br>
                 <br>
-               
+
                 <p>Teste de saida PHP</p>
                 <a>Nivel de SU - <?= $retorno1['su'] ?></a>
             </form>
@@ -48,6 +55,6 @@ and open the template in the editor.
 
 
         </div>
-        
+
     </body>
 </html>
