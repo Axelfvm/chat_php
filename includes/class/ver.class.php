@@ -12,8 +12,8 @@ $retorno1 = $query1->fetch();
 
 
 if (isset($_POST['enviar'])) {
-
-    $msg = $_POST['menssagem'];
+    $msg    = filter_input(INPUT_POST, 'menssagem', FILTER_SANITIZE_SPECIAL_CHARS);
+    //$msg = $_POST['menssagem'];
     $autor = $_SESSION['usuario'];
     $userip = $_POST['userIP'];
     if ($msg != '') {
