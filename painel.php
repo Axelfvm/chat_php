@@ -27,6 +27,7 @@ if (isset($_POST['salvar_painel'])) {
     $query = $pdo->prepare("UPDATE painel SET cadastro_enable='$cadastro', manutencao='$manutencao' WHERE id = '1'");
     //$query->execute([$nome], [$usu], [$email], [$sexo], [$idade], [$pais]);
     $query->execute();
+    header('Location: painel.php');
 }
 
 if ($retorno['cadastro_enable'] == 1) {
