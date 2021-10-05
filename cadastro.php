@@ -1,6 +1,8 @@
 <?php
 include('./config/config.php');
 include('./includes/class/ver.class.php');
+
+
 ?>
 
 <!DOCTYPE html>

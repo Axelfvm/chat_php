@@ -1,5 +1,15 @@
 <?php
 include('./config/config.php');
+
+$query = $pdo->prepare("select * from painel where id = 1");
+$query->execute();
+$retorno = $query->fetch();
+
+if ($retorno['manutencao'] == 1) {
+    session_destroy();
+    header('Location: includes/pages/manutencao.html');
+    die();
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,9 +36,9 @@ include('./config/config.php');
 
 
                 <input class="logar" name="acao" value="Logar" type="submit">
-                
+
                 <?php include('./includes/class/in.class.php'); ?>
-                
+
                 <a class="wrong1" id="usrwrong">Usuário Invalido</a>
                 <a class="wrong2" id="passwrong">Senha Incorreta</a>
 

@@ -1,6 +1,15 @@
 <?php
 include('./config/config.php');
 
+$query = $pdo->prepare("select * from painel where id = 1");
+$query->execute();
+$retorno = $query->fetch();
+
+if ($retorno['cadastro_enable'] != 1) {
+    session_destroy();
+    header('Location: includes/pages/manutencao.html');
+    die();
+}
 ?>
 
 <!DOCTYPE html>

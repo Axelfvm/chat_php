@@ -15,6 +15,7 @@ if ($retorno1['su'] == 10) {
     echo '<ul>';
     echo '<li><a> ' . $_SESSION['nome'] . '</a></li>';
     echo '    <li><a href="home.php">Home</a></li>';
+    echo '    <li><a href="painel.php">Painel</a></li>';
     echo '    <li><a href="buscar.php">Buscar Usuário</a></li>';
     echo '    <li><a href="cadastro.php">Cadastrar Usuário</a></li>';
     echo '    <li><a href="?sair">Sair</a></li>';
