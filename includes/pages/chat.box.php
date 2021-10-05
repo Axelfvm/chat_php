@@ -1,5 +1,4 @@
 <?php
-
 include('../../config/config.php');
 include('../class/chat.class.php');
 
@@ -10,7 +9,10 @@ $query1 = $pdo->prepare("select * from $tb_user where usuario = '$lgnusr'");
 $query1->execute();
 $retorno1 = $query1->fetch();
 
-
+if ($retorno1['ban'] == 1) {
+    header('Location: 404.html');
+    die();
+}
 
 if (count($retorno) > 0) {
     foreach ($retorno as $value) {
@@ -44,3 +46,4 @@ if (count($retorno) > 0) {
     echo 'Sem dados para exibir';
 }
 ?>
+<meta http-equiv="refresh" content="3">

@@ -10,9 +10,13 @@ $query1 = $pdo->prepare("select * from $tb_user where usuario = '$lgnusr'");
 $query1->execute();
 $retorno1 = $query1->fetch();
 
+if ($retorno1['ban'] == 1) {
+    header('Location: index.php');
+    die();
+}
 
 if (isset($_POST['enviar'])) {
-    $msg    = filter_input(INPUT_POST, 'menssagem', FILTER_SANITIZE_SPECIAL_CHARS);
+    $msg = filter_input(INPUT_POST, 'menssagem', FILTER_SANITIZE_SPECIAL_CHARS);
     //$msg = $_POST['menssagem'];
     $autor = $_SESSION['usuario'];
     $userip = $_POST['userIP'];

@@ -79,6 +79,7 @@ include('./includes/class/ver.class.php');
                         <th>Usuário</th>
                         <th>Email</th>
                         <th>Cargo</th>
+                        <th>Banido</th>
                         <th></th>
                     </tr>
 <?php

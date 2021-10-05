@@ -163,3 +163,13 @@ input:focus{
     color: white;
 }
 
+.index-erro{
+    position: absolute; 
+    margin-left: -123px; 
+    margin-top: 15px;
+    color: red; 
+    background: black; 
+    border-radius: 16px;
+    width: 250px; 
+    text-align: center;
+}

@@ -5,7 +5,7 @@
  */
 
 
-window.setInterval(function () {
+/*window.setInterval(function () {
     reloadIFrame()
 }, 3000);
 
@@ -15,4 +15,4 @@ function reloadIFrame() {
 
 function closeIndex(){
     document.getElementById('erroIndex').style.display = "none";
-}
+}*/
