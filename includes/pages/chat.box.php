@@ -46,4 +46,3 @@ if (count($retorno) > 0) {
     echo 'Sem dados para exibir';
 }
 ?>
-<meta http-equiv="refresh" content="3">

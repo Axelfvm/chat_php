@@ -70,7 +70,7 @@ form{
 }
 
 #iframe{
-    height: 800px;
+    height: 70vh;
     width: 100%;
     border: none;
     display: flex;
@@ -98,4 +98,23 @@ form{
     background: white;
     border-radius: 16px;
     z-index: 1;
+}
+
+footer{
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: grey;
+    display: flex;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer ul li{
+    margin-left: 15px;
+    list-style-type: none;
 }

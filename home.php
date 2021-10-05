@@ -24,7 +24,7 @@ include('./includes/class/ver.class.php');
             <iframe id="iframe" src="./includes/pages/chat.box.php"></iframe>
         </div>
         <script src="includes/js/main.js" type="text/javascript"></script>
-        
+        <?php include './includes/pages/footer.php'; ?>
         <!-- UserIP -->
         <script type="text/javascript">
             var userip;
