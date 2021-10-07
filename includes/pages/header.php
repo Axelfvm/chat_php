@@ -5,6 +5,11 @@ $query1 = $pdo->prepare("select * from $tb_user where usuario = '$lgnusr'");
 $query1->execute();
 $retorno1 = $query1->fetch();
 
+if ($_SESSION['login'] != true) {
+    header('Location: index.php');
+    die();
+}
+
 if (isset($_GET['sair'])) {
     session_destroy();
     header('Location: index.php');

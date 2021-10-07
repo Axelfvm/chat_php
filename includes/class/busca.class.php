@@ -61,12 +61,14 @@ if (isset($_POST['acao'])) {
 
             if ($value['ban'] == 1) {
                 $value['ban'] = 'Banido';
+                $color = 'red';
             } else if ($value['ban'] == 0) {
                 $value['ban'] = 'Normal';
+                $color = 'green';
             }
 
             echo '<tr>';
-            echo '' . '<td>' . $value['id'] . '</td>' . '<td>' . $value['nome'] . '</td>' . '<td>' . '<a href="perfil.php?user=' . $value['usuario'] . '" target="_blank">' . $value['usuario'] . '</a></td>' . '<td>' . $value['email'] . '</td>' . '<td>' . $value['su'] . '</td>' . '<td>' . $value['ban'] . '</td>' . '<td><a href="msenha.php?user=' . $value['usuario'] . '" target="_blank"><input type="button" value="Mudar senha"></a> <a href="editar.php?user=' . $value['usuario'] . '"><input type="button" value="Editar perfil"/></a> <a href="cargo.php?user=' . $value['usuario'] . '"><input type="button" value="Editar cargo"></a> <a href="?excluir=' . $value['id'] . '"><input type="button" value="Excluir"/></a><a href="?ban=' . $value['id'] . '"><input type="button" value="Ban/Unban"/></a></td>' . '</tr>' . '';
+            echo '' . '<td>' . $value['id'] . '</td>' . '<td>' . $value['nome'] . '</td>' . '<td>' . '<a href="perfil.php?user=' . $value['usuario'] . '" target="_blank">' . $value['usuario'] . '</a></td>' . '<td>' . $value['email'] . '</td>' . '<td>' . $value['su'] . '</td>' . '<td>' . '<a style="color: '. $color . '">'. $value['ban']. '</a>' . '</td>' . '<td><a href="msenha.php?user=' . $value['usuario'] . '" target="_blank"><input type="button" value="Mudar senha"></a> <a href="editar.php?user=' . $value['usuario'] . '"><input type="button" value="Editar perfil"/></a> <a href="cargo.php?user=' . $value['usuario'] . '"><input type="button" value="Editar cargo"></a> <a href="?excluir=' . $value['id'] . '"><input type="button" value="Excluir"/></a><a href="?ban=' . $value['id'] . '"><input type="button" value="Ban/Unban"/></a></td>' . '</tr>' . '';
 
             echo '</tr>';
         }
