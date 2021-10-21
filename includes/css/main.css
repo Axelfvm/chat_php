@@ -41,17 +41,18 @@ input:focus{
 .logar{
     height: 60px;
     width: 120px;
-    background: #7573ff;
+    background: #04AA6D;
     border-radius: 16px;
     margin-left: 65px;
     margin-top: 25px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     text-align: center;
     transition: 0.6s;
 }
 .logar:hover{
-    background: blue;
+    background: #058f5c;
     transition: 0.6s;
     cursor: pointer;
 }
@@ -66,7 +67,6 @@ input:focus{
     background: grey;
     position: absolute;
     margin-left: -97px;
-    margin-top: 76px;
     border-radius: 0 0 6px 6px;
     text-align: right;
 }

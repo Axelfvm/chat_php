@@ -2,11 +2,7 @@
 include('./config/config.php');
 include('./includes/class/ver.class.php');
 
-if (isset($_GET['about'])) {
-    if (isset($_GET['about']) == 'version') {
-        header('Location: about.php');
-    }
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +16,7 @@ if (isset($_GET['about'])) {
     <body style="background: <?= $cor_fundo ?>">
         <?php include './includes/pages/header.php'; ?>
 
-        <div class="center" style="margin-top: 70px; width: 80vw; height: 100%; display: flow-root;">   
+        <div class="center" style="margin-top: 70px; width: 80vw; height: 100%; display: flow-root; padding: 0;">   
             <form method="post" class="home-form">
                 <input type="text" id="userIP" name="userIP" style="display: none;">
                 <input type="text" name="menssagem" autofocus style="margin-top: 5px; font-size: 15px;margin-right: 5px;" maxlength="512">

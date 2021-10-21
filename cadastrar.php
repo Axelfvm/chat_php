@@ -7,7 +7,7 @@ $retorno = $query->fetch();
 
 if ($retorno['cadastro_enable'] != 1) {
     session_destroy();
-    header('Location: includes/pages/manutencao.html');
+    header('Location: includes/pages/404.html');
     die();
 }
 ?>
@@ -26,8 +26,8 @@ and open the template in the editor.
         <link href="includes/css/general.main.css" rel="stylesheet" type="text/css"/>
         <link href="includes/css/cadastro.main.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body style="background: <?= $cor_fundo ?>">
-        <div class="center" id="center" style="margin-top: 15px;">
+    <body style="background: <?= $cor_fundo ?>; height: 95vh;align-items: center;">
+        <div class="center" id="center" style="margin-top: 15px; height: 80%">
             <form method="post">
                 <div class="space"></div>
                 <input type="text" name="nome" placeholder="Nome" class="inpt_cadastro">

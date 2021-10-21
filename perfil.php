@@ -59,5 +59,6 @@ if ($perfilInfo['email'] == '') {
                 <a href='home.php'>Voltar</a>
             </form>
         </div>
+        <?php include './includes/pages/footer.php'; ?>
     </body>
 </html>

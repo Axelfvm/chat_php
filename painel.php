@@ -28,5 +28,6 @@ if ($_SESSION['login'] != true) {
                 <a href='home.php'>Voltar</a>
             </form>
         </div>
+        <?php include './includes/pages/footer.php'; ?>
     </body>
 </html>

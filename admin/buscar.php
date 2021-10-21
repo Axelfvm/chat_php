@@ -25,6 +25,7 @@ include('./../includes/class/ver.class.php');
             background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%);
             height: 102%;
             width: 80vw;
+            min-width: 700px;
             border-radius: 6px;
             margin-top: 80px;
         }
@@ -65,7 +66,7 @@ include('./../includes/class/ver.class.php');
 
     </style>
     <body style="background: <?= $cor_fundo ?>">
-<?php include('header.php'); ?>
+        <?php include('header.php'); ?>
         <div class="center" id="center">
             <form method="post">
                 <input type="text" name="busca" class="inpt_search" placeholder="Nome" autofocus>
@@ -82,9 +83,9 @@ include('./../includes/class/ver.class.php');
                         <th>Banido</th>
                         <th></th>
                     </tr>
-<?php
-include('./../includes/class/busca.class.php');
-?>
+                    <?php
+                    include('./../includes/class/busca.class.php');
+                    ?>
                 </table>
                 <br>
                 <br>
@@ -93,5 +94,6 @@ include('./../includes/class/busca.class.php');
             </form>
 
         </div>
+        <?php include '../includes/pages/footer.php'; ?>
     </body>
 </html>

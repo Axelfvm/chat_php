@@ -27,7 +27,7 @@ if (isset($_POST['salvar_painel'])) {
     $nomechat = $_POST['nome_chat'];
     $corfundo = $_POST['colorpicker'];
     $debug = $_POST['debug'];
-    
+
     $query = $pdo->prepare("UPDATE painel SET cadastro_enable='$cadastro', manutencao='$manutencao', n_chat='$nomechat', cor_fundo='$corfundo', debug='$debug' WHERE id = '1'");
     //$query->execute([$nome], [$usu], [$email], [$sexo], [$idade], [$pais]);
     $query->execute();
@@ -50,9 +50,9 @@ if ($retorno['manutencao'] == 1) {
     $manutencao_select1 = 'selected';
 }
 
-if ($retorno['debug'] == 'on'){
+if ($retorno['debug'] == 'on') {
     $debug_inpt = 'checked';
-}else{
+} else {
     $debug_inpt = '';
 }
 ?>
@@ -93,7 +93,7 @@ and open the template in the editor.
 
                 <label for="colorpicker">Cor de fundo:</label>
                 <input type="color" id="colorpicker" name="colorpicker" value="<?= $cor_fundo ?>">
-              
+
                 <label for="debug">Debug:</label>
                 <input type="checkbox" id="debug" name="debug" <?= $debug_inpt ?>>
 
@@ -101,5 +101,6 @@ and open the template in the editor.
             </form>
             <p>Versão: <?= $version ?></p>
         </div>
+        <?php include '../includes/pages/footer.php'; ?>
     </body>
 </html>

@@ -1,8 +1,6 @@
 <?php
 include('./../config/config.php');
 include('./../includes/class/ver.class.php');
-
-
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +18,7 @@ and open the template in the editor.
         <link href="../includes/css/cadastro.main.css" rel="stylesheet" type="text/css"/>
     </head>
     <body style="background: <?= $cor_fundo ?>">
-        <?php include('header.php'); ?>
+<?php include('header.php'); ?>
         <div class="center" id="center">
             <form method="post">
                 <div class="space"></div>
@@ -46,7 +44,7 @@ and open the template in the editor.
                 </select>
 
                 <input type="submit" name="acao" value="Criar">
-                <?php include('./../includes/class/cadastro.class.php'); ?>
+<?php include('./../includes/class/cadastro.class.php'); ?>
                 <br>
                 <br>
 
@@ -57,6 +55,6 @@ and open the template in the editor.
 
 
         </div>
-
+<?php include './../includes/pages/footer.php'; ?>
     </body>
 </html>

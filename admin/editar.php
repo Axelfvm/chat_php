@@ -40,7 +40,7 @@ include('./../includes/class/editar.class.php');
                 <input type="submit" value="Editar" name="editar"/>
                 <br>
                 <br>
-                <a href='home.php'>Voltar</a>
+                <a href='../home.php'>Voltar</a>
             </form>
         </div>
     </body>

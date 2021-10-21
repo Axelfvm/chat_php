@@ -5,8 +5,8 @@ if (isset($_POST['acao'])) {
     $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
     //$senha = $_POST['senha'];
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-    $sql = $pdo->prepare("SELECT * FROM $tb_user WHERE usuario = ?");
-    $sql->execute([$usuario]);
+    $sql = $pdo->prepare("SELECT * FROM $tb_user WHERE usuario = ? or email = ?");
+    $sql->execute([$usuario, $usuario]);
 
 
     if ($sql->rowCount() == 1) {

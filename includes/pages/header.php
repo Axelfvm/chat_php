@@ -30,12 +30,23 @@ if ($retorno1['su'] == 10) {
     echo '</div>';
 } else {
     echo '<div class = "topnav" id = "myTopnav">';
-      echo ' <a href = "home.php" class="active">Home</a>';
-      echo ' <a href = "painel.php">Painel Usuário</a>';
-      echo ' <a href = "?sair">Sair</a>';
+    echo '<a class="active"> ' . $_SESSION['nome'] . '</a>';
+    echo ' <a href = "home.php">Home</a>';
+    echo ' <a href = "painel.php">Painel Usuário</a>';
+    echo ' <a href = "?sair">Sair</a>';
     echo ' <a href = "javascript:void(0);" class = "icon" onclick = "myFunction()">
     <i class = "fa fa-bars"></i></a>';
     echo '</div>';
 }
 ?>
 
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
